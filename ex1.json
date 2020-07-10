@@ -1,0 +1,177 @@
+{
+    "Tracking_Number": 51973046639467,
+    "RFID": "TKX72MLSHH331HPE",
+    "Status": "Received",
+    "Scheduled_Delivery": "2020-7-8",
+    "Shipped_From": {
+        "Country": "United States",
+        "Town": "Mikditkim",
+        "City": "Zuhwimo",
+        "Postcode": "TF9 4DL",
+        "Street": "Ucale Street",
+        "Apartment_and_suite": "9",
+        "Department": "LA"
+    },
+    "Shipped_by_email": "dapcic@ashudot.eg",
+    "Shipment_reference": "xxuTh",
+    "Shipped_To": {
+        "Country": "Uganda",
+        "Town": "Uhipiju",
+        "City": "Gismivjif",
+        "Postcode": "CM6 1IO",
+        "Street": "Bago Avenue",
+        "Apartment_and_suite": "7203",
+        "Department": "ND"
+    },
+    "Shipped_to_email": "mo@pazap.mz",
+    "Shipped_or_Billed_on": "2020-1-28",
+    "Service_Type": "Express plus",
+    "Weight": 267.4683,
+    "Dimensions": {
+        "Length": 412,
+        "width": 100,
+        "height": 397
+    },
+    "Oversized": "Yes",
+    "Declared value": 2972,
+    "Multiple_Packages": 84,
+    "Additional_features": {
+        "Carbon-neutral": "No",
+        "Saturday delivery": "Yes",
+        "No third Party delivery": "Yes",
+        "Additional insurance": "No",
+        "VAT Number": "073827089"
+    },
+    "PaymentInfo": {
+        "Payment_card": {
+            "Card_Type": "VISA",
+            "Card_number": "4289593927022956",
+            "Expiration": "MM/YY",
+            "CVV": "123",
+            "Billing address": {
+                "Country": "Vatican City",
+                "Town": "Devirci",
+                "City": "Irsuddoz",
+                "Postcode": "BH8 6HC",
+                "Street": "Sikoj Mill",
+                "Apartment_and_suite": "828",
+                "Department": "SC"
+            },
+            "VAT_ID": "11545433631",
+            "Customs_broker_ID": "2616452047",
+            "Promo_code": "YumPZRNEsowV"
+        }
+    },
+    "Tracking_History": [
+        {
+            "Date": "2020-5-10",
+            "Time": "12:29:41",
+            "Location": "Ilnuahe",
+            "GPS Location": [
+                130.38062,
+                -5.14312
+            ],
+            "Activity": "eliFm]JW79cbu(w",
+            "Internal Activity": "Yes"
+        },
+        {
+            "Date": "2020-6-4",
+            "Time": "16:14:14",
+            "Location": "Ruzebuke",
+            "GPS Location": [
+                -148.38141,
+                -54.80792
+            ],
+            "Activity": "QOv3%S%isY&lkAJ",
+            "Internal Activity": "No"
+        },
+        {
+            "Date": "2020-11-11",
+            "Time": "18:42:29",
+            "Location": "Bucetanu",
+            "GPS Location": [
+                165.94478,
+                -12.50165
+            ],
+            "Activity": "u7N5OGT2P323N#]",
+            "Internal Activity": "No"
+        },
+        {
+            "Date": "2020-11-1",
+            "Time": "6:4:23",
+            "Location": "Hivigilu",
+            "GPS Location": [
+                165.9815,
+                -6.09768
+            ],
+            "Activity": "XfYWY8&j$vjq$7d",
+            "Internal Activity": "Yes"
+        },
+        {
+            "Date": "2020-12-13",
+            "Time": "1:11:18",
+            "Location": "Opekalsow",
+            "GPS Location": [
+                -91.86684,
+                83.40265
+            ],
+            "Activity": "BF1!]L[2D8wnAR8",
+            "Internal Activity": "No"
+        },
+        {
+            "Date": "2020-8-12",
+            "Time": "1:23:51",
+            "Location": "Jabcuri",
+            "GPS Location": [
+                76.54691,
+                71.97115
+            ],
+            "Activity": "wtbVp#l^fP23Vzw",
+            "Internal Activity": "No"
+        },
+        {
+            "Date": "2020-10-15",
+            "Time": "13:2:1",
+            "Location": "Jijeok",
+            "GPS Location": [
+                69.80548,
+                16.61744
+            ],
+            "Activity": "EqEi1wunRfO)tf(",
+            "Internal Activity": "Yes"
+        },
+        {
+            "Date": "2020-9-4",
+            "Time": "15:17:29",
+            "Location": "Wegoes",
+            "GPS Location": [
+                -74.73282,
+                -62.50128
+            ],
+            "Activity": "[i%y5]JIKKOvNQJ",
+            "Internal Activity": "Yes"
+        },
+        {
+            "Date": "2020-5-3",
+            "Time": "13:20:48",
+            "Location": "Vijtafez",
+            "GPS Location": [
+                60.41818,
+                28.16007
+            ],
+            "Activity": "4%fcd6ulIHEV0H$",
+            "Internal Activity": "Yes"
+        },
+        {
+            "Date": "2020-7-28",
+            "Time": "10:21:43",
+            "Location": "Jodsenot",
+            "GPS Location": [
+                97.89733,
+                15.52581
+            ],
+            "Activity": "hRIu7NpUdRfg]bg",
+            "Internal Activity": "Yes"
+        }
+    ]
+}
