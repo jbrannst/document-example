@@ -1,0 +1,99 @@
+{
+    "Tracking_Number": {"$integer": {"min": 9999999999999,"max": 99999999999999 }}, 
+    "RFID": {"$string": { "length": 16, "casing": "upper", "alpha": true, "numeric": true }},
+    "Status": {"$choose": {"from": [ "Received",  "AtOrigin", "InCustoms", "InTransit", "AtDestinationWarehouse", "OutOnDelivery", "Delivered", "Exception", "Returned",
+    "Scheduled"]}},
+    "Scheduled_Delivery": {"$join": {"array": ["2020-", {"$integer": {"min":1, "max": 12}},"-",{"$integer": {"min":1, "max": 28}}]}}, 
+    "Shipped_From": {
+        "Country":{"$country": {"full":true}},
+        "Town":"$city",
+        "City":"$city",
+        "Postcode":"$postcode",
+        "Street":"$street",
+        "Apartment_and_suite":{"$string": {"length": {"$integer": {"min": 1,"max": 4 }}, "numeric":true}},
+        "Department":"$state"
+    },
+    "Shipped_by_email": "$email",
+    "Shipment_reference":  {"$string": {"length": {"$integer": {"min": 2,"max": 35}}}},
+    "Shipped_To": {
+        "Country":{"$country": {"full":true}},
+        "Town":"$city",
+        "City":"$city",
+        "Postcode":"$postcode",
+        "Street":"$street",
+        "Apartment_and_suite":{"$string": {"length": {"$integer": {"min": 1,"max": 4 }}, "numeric":true}},
+        "Department":"$state"
+    },
+    "Shipped_to_email": "$email",
+    "Shipped_or_Billed_on": {"$join": {"array": ["2020-", {"$integer": {"min":1, "max": 12}},"-",{"$integer": {"min":1, "max": 28}}]}}, 
+    "Service_Type": {"$choose": {"from": [ "Express plus", "express", "express saver", "standard"]}},
+    "Weight": {"$floating": {"min":0 ,"max": 1000}},
+    "Dimensions": {
+        "Length":{"$integer": {"min":0 ,"max": 1000}}, 
+        "width":{"$integer": {"min":0 ,"max": 1000}},
+        "height":{"$integer": {"min":0 ,"max": 1000}} 
+    },
+    "Oversized": {"$choose": {"from": [ "Yes", "No"]}},
+    "Declared value": {"$integer": {"min":0 ,"max": 10000}},
+    "Multiple_Packages": {"$integer": {"min":0 ,"max": 100}} ,
+    "Additional_features":{
+        "Carbon-neutral" : {"$choose": {"from": [ "Yes", "No"]}},
+        "Saturday delivery": {"$choose": {"from": [ "Yes", "No"]}},
+        "No third Party delivery": {"$choose": {"from": [ "Yes", "No"]}},
+        "Additional insurance" : {"$choose": {"from": [ "Yes", "No"]}},
+        "VAT Number": {"$string": {"length": {"$integer": {"min": 8,"max": 12 }}, "numeric":true}}
+    },
+    "PaymentInfo":{
+        "$choose": {"from": [
+            {
+            "Payment_card": {
+                "Card_Type":"VISA",
+                "Card_number": {"$string": {"length": 16, "numeric":true}},
+                "Expiration": "MM/YY",
+                "CVV":"123",
+                "Billing address": {
+                    "Country":{"$country": {"full":true}},
+                    "Town":"$city",
+                    "City":"$city",
+                    "Postcode":"$postcode",
+                    "Street":"$street",
+                    "Apartment_and_suite":{"$string": {"length": {"$integer": {"min": 1,"max": 4 }}, "numeric":true}},
+                    "Department":"$state"
+                },
+                "VAT_ID":{"$string": {"length": {"$integer": {"min": 8,"max": 12 }}, "numeric":true}},
+                "Customs_broker_ID":{"$string": {"length": {"$integer": {"min": 8,"max": 12 }}, "numeric":true}},
+                "Promo_code":{"$string": {"length": {"$integer": {"min": 8,"max": 12 }}, "alpha":true}}
+            }},
+            {
+                "Paypal": {"$string": { "length": 64, "casing": "upper", "alpha": true, "numeric": true }},
+                "VAT_ID":{"$string": {"length": {"$integer": {"min": 8,"max": 12 }}, "numeric":true}},
+                "Customs_broker_ID":{"$string": {"length": {"$integer": {"min": 8,"max": 12 }}, "numeric":true}},
+                "Promo_code":{"$string": {"length": {"$integer": {"min": 8,"max": 12 }}, "alpha":true}}
+            },
+            {"Cash_UPS_Access_point":{
+                    "ID": {"$integer": {"min": 1000000,"max": 9999999 }},
+                    "Address": "$street",
+                    "Postcode": "$postcode",
+                    "Town":"$city",
+                    "City":"$city",
+                    "Country":{"$country": {"full":true}},
+                    "VAT_ID":{"$string": {"length": {"$integer": {"min": 8,"max": 12 }}, "numeric":true}},
+                    "Customs_broker_ID":{"$string": {"length": {"$integer": {"min": 8,"max": 12 }}, "numeric":true}},
+                    "Promo_code":{"$string": {"length": {"$integer": {"min": 8,"max": 12 }}, "alpha":true}}
+                }}
+        ]}
+        
+    },
+    "Tracking_History": {"$array": {"of":
+    
+        {
+            "Date": {"$join": {"array": ["2020-", {"$integer": {"min":1, "max": 12}},"-",{"$integer": {"min":1, "max": 28}}]}},
+            "Time": {"$join": {"array": [{"$hour": {"twentyfour": true}},":","$minute",":","$second"]}},
+            "Location": "$city",
+            "GPS Location": "$coordinates",
+            "Activity": {"$string": {"length":15}},
+            "Internal Activity": {"$choose": {"from": [ "Yes", "No"]}}
+        }, 
+        "number": {"$integer": {"min": 5,"max": 15 }} 
+    }}    
+}   
